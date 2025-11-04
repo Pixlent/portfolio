@@ -8,29 +8,19 @@ body {
   background-color: black;
 }
 
-/* #background {
-  object-fit: cover;
-  width: 100vw;
-  position: absolute;
-  top: 0px;
-  z-index: -1;
-  filter: brightness(60%);
-} */
-
 #frame {
   position: fixed;
-  display: flex;
-  align-items: flex-start;
   top: 5vh;
   left: 4vw;
   width: 92vw;
   height: 90vh;
   border: 0.1vw solid white;
+}
 
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 4vw 4vw;
-  background-image: radial-gradient(circle, #8a8a8a 2px, #000000 1px);
+#content {
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
 
   font-size: 2vw;
   font-family: "alight-slab", sans-serif;
@@ -77,12 +67,26 @@ nav {
 
 #about {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translateY(-5vh);
+  filter: blur(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
   text-align: right;
   font-style: thin;
 }
 
 #about:target {
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transform: translateY(0);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+#particles-js {
+  pointer-events: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 100%;
 }
