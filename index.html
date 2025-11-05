@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="https://use.typekit.net/osv1syj.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="./node_modules/particles.js/particles.js"></script>
-    <script src="app.js"></script>
   </head>
   <body>
-    <div id="frame">
+    <div id="cursor-default"></div>
+    <div id="frame" class="border">
+      <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/naW2ZdUu63o?si=njRXQc42ii0Rz-ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <div id="particles-js"></div>
       <div id="content">
         <header>
@@ -22,39 +24,60 @@
             >
           </h1>
           <nav>
-            <a
-              href="#about"
-              style="cursor: pointer; color: white; text-decoration: none"
-              >about</a
-            >
-            <a
-              href="#projects"
-              style="cursor: pointer; color: white; text-decoration: none"
-              >projects</a
-            >
-            <a
-              href="#contact"
-              style="cursor: pointer; color: white; text-decoration: none"
-              >contact</a
-            >
+            <div>
+              <a
+                href="#about"
+                style="cursor: pointer; color: white; text-decoration: none"
+                class="button interactive"
+                >about</a
+              >
+            </div>
+            <div>
+              <a
+                href="#projects"
+                style="cursor: pointer; color: white; text-decoration: none"
+                class="button interactive"
+                >projects</a
+              >
+            </div>
+            <div>
+              <a
+                href="#contact"
+                style="cursor: pointer; color: white; text-decoration: none"
+                class="button interactive"
+                >contact</a
+              >
+            </div>
           </nav>
         </header>
         <main>
-          <section id="about">
-            <p class="about">
-              I'm passionate about software and creative media
-            </p>
+          <section id="about" class="main-content">
+            <p>I'm passionate about software and creative media</p>
             <p>I've dwellved into video editing,</p>
             <p>photo editing, color grading, vfx</p>
             <p>programming and much, much more!</p>
           </section>
+          <section id="projects" class="main-content">
+            <div>
+              <p><section class="header-text">10 Pictures</section>
+              idea / photography / post</p>
+            </div>
+            <div>
+              <p><section class="header-text">Boy in the bubble</section>
+              idea / edit / color / actor</p>
+            </div>
+            <div>
+              <p><section class="header-text">Farm Documentary</section>
+              idea / edit / actor</p>
+            </div>
+          </section>
+          <section id="contact" class="main-content">
+            <p>mail: 2beheima@gmail.com</p>
+            <p>discord: @pixlent</p>
+          </section>
         </main>
       </div>
     </div>
-    <!--     <img
-      id="background"
-      src="./images/madame_monet_and_her_son.jpg"
-      alt="painting of a woman with a parasol"
-    /> -->
+    <script src="app.js"></script>
   </body>
 </html>

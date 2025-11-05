@@ -20,3 +20,25 @@ document.addEventListener("mousemove", function (event) {
   window.pJSDom[0].pJS.interactivity.mouse.pos_y = mouseY;
   window.pJSDom[0].pJS.interactivity.status = "mousemove";
 });
+
+const interactiveElements = document.querySelectorAll(".interactive");
+const cursor = document.getElementById("cursor-default");
+
+document.addEventListener("mousemove", function (event) {
+  // Adjust for page scroll to get accurate position
+  var x = event.clientX + window.scrollX;
+  var y = event.clientY + window.scrollY;
+
+  // Position element centered on cursor
+  cursor.style.left = x + "px";
+  cursor.style.top = y + "px";
+});
+
+interactiveElements.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("cursor-big");
+  });
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("cursor-big");
+  });
+});

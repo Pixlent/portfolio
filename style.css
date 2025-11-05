@@ -2,10 +2,30 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  cursor: none !important;
 }
 
 body {
   background-color: black;
+  cursor: none;
+}
+
+#cursor-default {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 0.1vw solid white;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 9999;
+}
+
+#cursor-default.cursor-big {
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 #frame {
@@ -14,7 +34,18 @@ body {
   left: 4vw;
   width: 92vw;
   height: 90vh;
+}
+
+.border {
   border: 0.1vw solid white;
+}
+
+.button {
+  filter: brightness(100%);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: brightness(50%);
+  }
 }
 
 #content {
@@ -22,7 +53,7 @@ body {
   display: flex;
   align-items: flex-start;
 
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-family: "alight-slab", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -31,23 +62,15 @@ body {
 
 header,
 main {
-  flex: 1;
   display: flex;
 }
 
 header {
+  flex: 1;
   justify-content: flex-start;
   flex-direction: column;
 
   margin-left: 1.8vw;
-}
-
-main {
-  justify-content: flex-end;
-  flex-direction: column;
-
-  margin-right: 1.8vw;
-  margin-top: 1.8vh;
 }
 
 h1 {
@@ -55,7 +78,34 @@ h1 {
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 5vw;
+  font-size: 7vw;
+}
+
+.header-text {
+  font-family: "cy", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  font-size: 3vw;
+}
+
+main {
+  position: relative;
+  flex: 4;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  text-align: right;
+
+  margin-right: 1.8vw;
+  margin-top: 1.8vh;
+
+  & > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 nav {
@@ -65,21 +115,20 @@ nav {
   text-align: left;
 }
 
-#about {
+.main-content {
   opacity: 0;
   transform: translateY(-5vh);
   filter: blur(10px);
   transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
-  pointer-events: none;
-  text-align: right;
-  font-style: thin;
-}
 
-#about:target {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-  pointer-events: auto;
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+    pointer-events: auto;
+  }
 }
 
 #particles-js {
