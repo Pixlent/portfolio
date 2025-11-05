@@ -41,11 +41,26 @@ body {
 }
 
 .button {
+  all: unset;
   filter: brightness(100%);
   transition: filter 0.3s ease;
   &:hover {
     filter: brightness(50%);
   }
+}
+
+#boy-in-the-bubble-video {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Optional, for no border */
+  display: block; /* Removes iframe inline spacing */
+  z-index: -1;
 }
 
 #content {

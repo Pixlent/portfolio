@@ -42,3 +42,8 @@ interactiveElements.forEach((el) => {
     cursor.classList.remove("cursor-big");
   });
 });
+
+document.getElementById("boy-in-the-bubble-button").onclick = function () {
+  document.getElementById("boy-in-the-bubble-video").style.visibility =
+    "visible";
+};
