@@ -10,6 +10,13 @@ body {
   cursor: none;
 }
 
+@media (pointer: coarse) {
+  .mouse {
+    visibility: hidden;
+  }
+  /* Styles for touch devices */
+}
+
 #cursor-default {
   position: fixed;
   top: 0;
@@ -63,7 +70,7 @@ body {
   }
 }
 
-#boy-in-the-bubble-video {
+.fullscreen-content {
   visibility: hidden;
   position: absolute;
   top: 0;
@@ -80,12 +87,16 @@ body {
   z-index: 2;
   display: flex;
   align-items: flex-start;
+  flex-direction: column;
 
-  font-size: 1.5vw;
+  font-size: 1.5vmax;
   font-family: "alight-slab", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: white;
+
+  height: 100%;
+  width: 100%;
 }
 
 header,
@@ -106,7 +117,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   color: white;
-  font-size: 7vw;
+  font-size: 7vmax;
 }
 
 .header-text {
@@ -114,7 +125,7 @@ h1 {
   font-weight: 500;
   font-style: normal;
   color: white;
-  font-size: 3vw;
+  font-size: 3vmax;
 }
 
 main {
@@ -123,15 +134,16 @@ main {
   justify-content: flex-end;
   flex-direction: column;
 
+  width: 100%;
   text-align: right;
 
   margin-right: 1.8vw;
   margin-top: 1.8vh;
+  margin-bottom: 1.8vh;
 
   & > * {
     position: absolute;
-    top: 0;
-    left: 0;
+    right: 1.8vw;
     width: 100%;
   }
 }

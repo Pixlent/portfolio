@@ -47,6 +47,14 @@ document.getElementById("boy-in-the-bubble-button").onclick = function () {
   document.getElementById("boy-in-the-bubble-video").style.visibility =
     "visible";
   document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("particles-js").style.visibility = "hidden";
+};
+
+document.getElementById("farm-documentary-button").onclick = function () {
+  document.getElementById("farm-documentary-video").style.visibility =
+    "visible";
+  document.getElementById("close-button").style.visibility = "visible";
+  document.getElementById("particles-js").style.visibility = "hidden";
 };
 
 const fullscreenContent = document.querySelectorAll(".fullscreen-content");
@@ -56,4 +64,5 @@ document.getElementById("close-button").onclick = function () {
     element.style.visibility = "hidden";
   });
   document.getElementById("close-button").style.visibility = "hidden";
+  document.getElementById("particles-js").style.visibility = "visible";
 };
