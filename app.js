@@ -46,4 +46,14 @@ interactiveElements.forEach((el) => {
 document.getElementById("boy-in-the-bubble-button").onclick = function () {
   document.getElementById("boy-in-the-bubble-video").style.visibility =
     "visible";
+  document.getElementById("close-button").style.visibility = "visible";
+};
+
+const fullscreenContent = document.querySelectorAll(".fullscreen-content");
+
+document.getElementById("close-button").onclick = function () {
+  fullscreenContent.forEach((element) => {
+    element.style.visibility = "hidden";
+  });
+  document.getElementById("close-button").style.visibility = "hidden";
 };

@@ -28,6 +28,18 @@ body {
   transform: translate(-50%, -50%) scale(1.5);
 }
 
+#close-button {
+  all: unset;
+  position: absolute;
+  left: 50%;
+
+  font-size: 3vw;
+  font-family: "rosalind", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
 #frame {
   position: fixed;
   top: 5vh;
@@ -49,6 +61,10 @@ body {
   }
 }
 
+#close-button {
+  visibility: hidden;
+}
+
 #boy-in-the-bubble-video {
   visibility: hidden;
   position: absolute;
@@ -60,7 +76,6 @@ body {
   height: 100%;
   border: none; /* Optional, for no border */
   display: block; /* Removes iframe inline spacing */
-  z-index: -1;
 }
 
 #content {
