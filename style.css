@@ -38,6 +38,8 @@ body {
   font-weight: 400;
   font-style: normal;
   color: white;
+
+  visibility: hidden;
 }
 
 #frame {
@@ -59,10 +61,6 @@ body {
   &:hover {
     filter: brightness(50%);
   }
-}
-
-#close-button {
-  visibility: hidden;
 }
 
 #boy-in-the-bubble-video {
