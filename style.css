@@ -63,11 +63,31 @@ body {
 
 .button {
   all: unset;
+  user-select: none;
   filter: brightness(100%);
   transition: filter 0.3s ease;
+  color: white;
+  font-size: 3vw;
   &:hover {
     filter: brightness(50%);
   }
+}
+
+#ten-pictures-button-previous {
+  position: fixed;
+  top: 50%;
+  left: 1.5vw;
+}
+
+#ten-pictures-button-next {
+  position: fixed;
+  top: 50%;
+  right: 1.5vw;
+}
+
+.interactive {
+  color: white;
+  text-decoration: none;
 }
 
 .fullscreen-content {
@@ -81,6 +101,38 @@ body {
   height: 100%;
   border: none; /* Optional, for no border */
   display: block; /* Removes iframe inline spacing */
+}
+
+#pictures {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.picture-visible {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+  pointer-events: none;
+}
+
+.picture-hidden {
+  width: 0%;
+  height: 0%;
+
+  opacity: 0;
+  transform: translateX(var(--translate-x, 0));
+  filter: blur(10px);
 }
 
 #content {
@@ -157,7 +209,7 @@ nav {
 
 .main-content {
   opacity: 0;
-  transform: translateY(-5vh);
+  transform: translateY(5vh);
   filter: blur(10px);
   transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
 

@@ -4,82 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alexander</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/osv1syj.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="./node_modules/particles.js/particles.js"></script>
   </head>
   <body>
     <div id="cursor-default" class="mouse"></div>
-    <button id="close-button">X</button>
+    <button id="close-button" class="button">X</button>
     <div id="frame" class="border">
       <div id="particles-js" class="mouse"></div>
       <div id="content">
         <header>
           <h1>
-            <a
-              href="#"
-              style="cursor: pointer; color: white; text-decoration: none"
-              >Alexander</a
-            >
+            <a href="#" class="interactive">Alexander</a>
           </h1>
           <nav>
             <div>
-              <a
-                href="#about"
-                style="cursor: pointer; color: white; text-decoration: none"
-                class="button interactive"
-                >about</a
-              >
+              <a href="#about" class="button interactive">about</a>
             </div>
             <div>
-              <a
-                href="#projects"
-                style="cursor: pointer; color: white; text-decoration: none"
-                class="button interactive"
-                >projects</a
-              >
+              <a href="#projects" class="button interactive">projects</a>
             </div>
             <div>
-              <a
-                href="#contact"
-                style="cursor: pointer; color: white; text-decoration: none"
-                class="button interactive"
-                >contact</a
-              >
+              <a href="#contact" class="button interactive">contact</a>
             </div>
           </nav>
         </header>
         <main>
           <section id="about" class="main-content">
-            <p>I'm passionate about software and creative media</p>
-            <p>I've dwellved into video editing,</p>
-            <p>photo editing, color grading, vfx</p>
-            <p>programming and much, much more!</p>
+            <h2>Who am I?</h2>
+            <p>I am a passionate software developer</p>
+            <p>and media creator. I have dwelved into</p>
+            <p>multiple fields like video editing,</p>
+            <p>photo editing, color grading, vfx,</p>
+            <p>rust, java and javascript programming</p>
+            <p>and I am ready to learn even more!</p>
           </section>
-          <section id="projects" class="main-content">
+          <div id="projects" class="main-content">
             <div>
-              <p><section class="header-text"><button class="button">10 Pictures</button></section>
-              idea / photography / post</p>
+              <h2 class="header-text">
+                <button class="button" id="ten-pictures-button">
+                  10 Pictures
+                </button>
+              </h2>
+              idea / photography / post
             </div>
             <div>
-              <p><section class="header-text"><button class="button" id="boy-in-the-bubble-button">Boy in the bubble</button></section>
-              idea / edit / color / actor</p>
+              <h2 class="header-text">
+                <button class="button" id="boy-in-the-bubble-button">
+                  Boy in the bubble
+                </button>
+              </h2>
+              idea / edit / color / actor
             </div>
             <div>
-              <p><section class="header-text"><button class="button" id="farm-documentary-button">Farm Documentary</button></section>
-              idea / edit / actor</p>
+              <h2 class="header-text">
+                <button class="button" id="farm-documentary-button">
+                  Farm Documentary
+                </button>
+              </h2>
+              idea / edit / actor
             </div>
-          </section>
-          <section id="contact" class="main-content">
+          </div>
+          <div id="contact" class="main-content">
             <p>mail: 2beheima@gmail.com</p>
             <p>discord: @pixlent</p>
-          </section>
+          </div>
         </main>
       </div>
-        <iframe id="boy-in-the-bubble-video" class="fullscreen-content" src="https://www.youtube-nocookie.com/embed/naW2ZdUu63o?si=njRXQc42ii0Rz-ni" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe id="farm-documentary-video" class="fullscreen-content" src="https://www.youtube-nocookie.com/embed/D4iJDv8A23A?si=Q1U0PdrxxmLezCGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe
+        id="boy-in-the-bubble-video"
+        class="fullscreen-content"
+        src="https://www.youtube-nocookie.com/embed/naW2ZdUu63o?si=njRXQc42ii0Rz-ni"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <iframe
+        id="farm-documentary-video"
+        class="fullscreen-content"
+        src="https://www.youtube-nocookie.com/embed/D4iJDv8A23A?si=Q1U0PdrxxmLezCGo"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <div class="fullscreen-content ten-pictures">
+        <div id="pictures">
+          <img src="images/10-pictures/Bevegelse.jpg" class="picture-visible" />
+          <img
+            src="images/10-pictures/Froskeperspektiv.jpg"
+            class="picture-hidden"
+          />
+          <img
+            src="images/10-pictures/Fugleperspektiv.jpg"
+            class="picture-hidden"
+          />
+          <img src="images/10-pictures/Himmel.jpg" class="picture-hidden" />
+          <img
+            src="images/10-pictures/Kommunikasjon 1.jpg"
+            class="picture-hidden"
+          />
+          <img
+            src="images/10-pictures/Kommunikasjon 2.jpg"
+            class="picture-hidden"
+          />
+          <img
+            src="images/10-pictures/Komposisjon 1.jpg"
+            class="picture-hidden"
+          />
+          <img
+            src="images/10-pictures/Komposisjon 2.jpg"
+            class="picture-hidden"
+          />
+          <img src="images/10-pictures/Ultranær.jpg" class="picture-hidden" />
+          <img src="images/10-pictures/Ultratotal.jpg" class="picture-hidden" />
+        </div>
+        <button id="ten-pictures-button-previous" class="button">&lt;</button>
+        <button id="ten-pictures-button-next" class="button">></button>
       </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
